@@ -1,0 +1,212 @@
+/* CSS สำหรับพื้นหลังวิดีโอ */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ปรับวิดีโอให้ครอบคลุมพื้นที่ทั้งหมด */
+    z-index: -1; /* ทำให้วิดีโออยู่ด้านหลังเนื้อหา */
+}
+
+.profile-container {
+    margin-top: 50px; /* เพิ่มระยะห่างด้านบน */
+}
+
+.profile-img {
+    width: 200px; /* กำหนดขนาดของรูป */
+    height: 200px; /* กำหนดขนาดของรูป */
+    object-fit: cover; /* ให้รูปปรับขนาดให้พอดีกับกรอบ */
+    border-radius: 50%; /* ทำให้รูปเป็นวงกลม */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* เพิ่มเงาให้รูป */
+    transition: transform 0.3s ease-in-out; /* เพิ่มการเปลี่ยนแปลงเมื่อมีการโฮเวอร์ */
+}
+
+.profile-img:hover {
+    transform: scale(1.1); /* ขยายขนาดรูปเมื่อชี้เมาส์ */
+}
+
+.portfolio-text {
+    font-size: 2rem; /* ปรับขนาดข้อความให้ใหญ่ขึ้น */
+    font-weight: bold; /* ทำให้ข้อความหนา */
+    color: #ffffff; /* เปลี่ยนสีเป็นเขียวตามธีม */
+    text-transform: uppercase; /* ทำให้ข้อความเป็นตัวพิมพ์ใหญ่ทั้งหมด */
+    letter-spacing: 2px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+    font-family: 'Arial', sans-serif; /* เปลี่ยนฟอนต์ */
+}
+
+/* สไตล์สำหรับการติดต่อ */
+.contact-container h3 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* ระยะห่างระหว่างไอคอน */
+    flex-wrap: wrap; /* ให้ไอคอนแสดงผลในหลายแถวถ้าจำเป็น */
+}
+
+.social-icon {
+    font-size: 3rem; /* ขนาดไอคอน */
+    color: white;
+    transition: all 0.4s ease-in-out; /* เพิ่มการเคลื่อนไหว */
+    padding: 15px; /* กำหนดระยะห่างให้เหมาะสม */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* เงารอบๆ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;  /* กำหนดขนาดให้เหมาะสม */
+    height: 70px; /* กำหนดขนาดให้เหมาะสม */
+    min-width: 70px; /* กำหนดขนาดขั้นต่ำ */
+    min-height: 70px; /* กำหนดขนาดขั้นต่ำ */
+    text-decoration: none; /* เอาขีดใต้ออก */
+}
+
+.social-icon:hover {
+    transform: scale(1.5) rotate(20deg); /* ขยายและหมุน */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 255, 255, 0.5); /* เพิ่มเงาและแสง */
+}
+
+.social-icon.facebook {
+    background-color: #3b5998; /* พื้นหลังสีฟ้าของ Facebook */
+}
+
+.social-icon.line {
+    background-color: #00c300; /* พื้นหลังสีเขียวของ Line */
+}
+
+.social-icon.instagram {
+    background-color: #e4405f; /* พื้นหลังสีชมพูของ Instagram */
+}
+
+/* สไตล์สำหรับเนื้อหา */
+.contact-container {
+    margin-top: 200px; /* เพิ่มระยะห่างด้านบนเพื่อให้ไปอยู่ด้านล่าง */
+    text-align: center;
+}
+
+.text-left {
+    flex: 1; /* ให้ข้อความ "My Portfolio" ใช้พื้นที่ด้านซ้าย */
+}
+
+/* เพิ่มสไตล์สำหรับเนื้อหา */
+.container-fluid {
+    position: relative;
+    z-index: 1; /* ทำให้เนื้อหามาอยู่บนวิดีโอ */
+    color: white; /* ทำให้ข้อความมองเห็นได้ชัดขึ้นบนพื้นหลัง */
+    background-color: rgb(1, 43, 0);
+}
+
+.nav-pills {
+    background-color: #2E5077;  /* พื้นหลังสีเขียว */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.nav-link {
+    color: white !important; /* เปลี่ยนเป็นสีขาว */
+    font-weight: bold; /* ทำให้ข้อความหนาขึ้น */
+    transition: color 0.5s ease; /* เพิ่มเอฟเฟกต์เปลี่ยนสี */
+}
+
+.nav-link:hover {
+    background-color: #79D7BE; /* สีเขียวเข้มเมื่อเม้าส์ไปชี้ */
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* ให้ข้อความอยู่ตรงกลาง */
+    color: white;
+    font-size: 2000rem; /* เพิ่มขนาดตัวอักษร */
+    text-align: center;
+    font-family: 'Arial', sans-serif; /* ใช้ฟอนต์ Arial */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* เพิ่มเงาให้ตัวอักษร */
+    font-weight: bold; /* ทำให้ข้อความหนาขึ้น */
+}
+
+.row {
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #4DA1A9; /* พื้นหลังสีเขียว */
+    color: #ffffff; /* สีข้อความ */
+    border-radius: 10px; /* ทำให้มุมของการ์ดเป็นวงกลม */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* เพิ่มเงาให้การ์ด */
+}
+
+.card-img-top {
+    transition: transform 0.3s ease-in-out; /* เพิ่มความนุ่มนวลในการขยาย */
+}
+
+.custom-color {
+    padding: 10px;
+    color: #ffffff;
+}
+
+.card-img-top:hover {
+    transform: scale(2);
+    z-index: 10;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* สีดำโปร่งใส */
+    z-index: -1; /* วางไว้เหนือวิดีโอ */
+}
+
+.row {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+/* กำหนดการจัดเรียงภาพ */
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap; /* ให้ภาพขึ้นแถวใหม่ถ้าจำเป็น */
+}
+
+/* กำหนดขนาดภาพให้เท่ากัน */
+.image-gallery .col-4 {
+    flex: 1 1 30%; /* ทำให้แต่ละภาพใช้พื้นที่ประมาณ 30% */
+}
+
+/* ปรับขนาดภาพทุกภาพ */
+.img-fluid {
+    width: 100%;
+    height: 350px; /* กำหนดความสูงของภาพให้เท่ากัน */
+    object-fit: cover; /* ให้ภาพปรับขนาดตามกรอบโดยไม่เสียสัดส่วน */
+    border-radius: 10px; /* ทำให้มุมภาพโค้งมน */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ภาพ */
+}
+
+.img-fluid:hover {
+    transform: scale(1.1) rotate(5deg); /* ขยายและหมุนเบาๆ เมื่อเอาเมาส์ไปแตะ */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.5); /* เพิ่มเงาให้ชัดเจนขึ้น */
+    transition: all 0.4s ease-in-out; /* ทำให้การเปลี่ยนแปลงลื่นไหล */
+}
+
+.in-view {
+    transform: scale(1.05);
+    opacity: 1;
+    transition: all 0.6s ease;
+}
